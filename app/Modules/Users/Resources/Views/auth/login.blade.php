@@ -1,3 +1,5 @@
+@extends('layouts.inner')
+@section('content')
 <div class="enter-win" id="enter-win">
     <form id="f_contact" name="contact" role="form" method="POST" action="{{ url('login') }}">
 
@@ -77,8 +79,8 @@
             </div>
         </div>
     </form>
-</div>  <!-- feedback -->
-
+</div>
+@endsection
 
 
 

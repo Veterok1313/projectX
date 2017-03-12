@@ -43,22 +43,21 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="theme-color" content="#0073be"/>
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicons/favicon.ico') }}"/>
-    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/img/favicon.ico') }}"/>
 
-
-    <link rel="stylesheet" href="/css/reset.css"/>
-    <link rel="stylesheet" href="/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="/css/slider-pro.css" media="screen"/>
-    <link rel="stylesheet" href="/css/jquery.formstyler.css">
-    <link rel="stylesheet" href="/css/basictable.css">
-    <link rel="stylesheet" href="/css/social-likes_birman.css">
-    <link rel="stylesheet" href="/css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="/css/ion.rangeSlider.skinFlat.css">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/media.css">
-    <link rel="stylesheet" href="/css/fonts.css"/>
-    <link rel="stylesheet" href="/css/jquery.fancybox.css">
+    <link rel='stylesheet' href='/css/settings.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/bootstrap.min.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/swatches-and-photos.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/prettyPhoto.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/jquery.selectBox.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/font-awesome.min.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic%7CCrimson+Text:400,400italic,600,600italic,700,700italic' type='text/css' media='all'/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel='stylesheet' href='/css/elegant-icon.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/commerce.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/custom.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/css/magnific-popup.css' type='text/css' media='all'/>
 
     @stack('css')
 
@@ -67,36 +66,61 @@
 </head>
 
 <body>
-    <div class="b-page">
-        <div class="b-page__wrapper">
-            <div class="wrapper">
-                @include('parts.header')
-                @include('parts.mobile-header')
+    <div class="offcanvas open">
+        <div class="offcanvas-wrap">
+            <div class="offcanvas-user clearfix">
+                <a class="offcanvas-user-wishlist-link" href="wishlist.html">
+                    <i class="fa fa-heart-o"></i> My Wishlist
+                </a>
+                <a class="offcanvas-user-account-link" href="my-account.html">
+                    <i class="fa fa-user"></i> Login
+                </a>
+            </div>
 
-                <div class="menu-block">
-                    @include('category::menu')
-                    @include('search::main')
-                    <div class="clear"></div>
-                </div>
+        </div>
+    </div>
+    <div id="wrapper" class="wide-wrap">
+        <div class="offcanvas-overlay"></div>
+        @include('parts.header')
+        <div class="content-container no-padding">
+            <div class="container-full">
                 @section('page_content')
                 @show
-            </div><!--end wrapper -->
-            <div class="page__buffer"></div>
+            </div>
         </div>
-
         @include('parts.footer')
     </div>
 
 
-<script src="/js/jquery-1.12.0.js"></script>
-<script src="/js/slick.js"></script>
-<script src="/js/jquery.fancybox.pack.js"></script>
-<script src="/js/jquery.basictable.js"></script>
-<script src="/js/social-likes.min.js"></script>
-<script src="/js/jquery.formstyler.js"></script>
-<script type="text/javascript" src="/js/jquery.sliderPro.min.js"></script>
-<script src="/js/ion.rangeSlider.js"></script>
-<script src="/js/core.js"></script>
+    <script type='text/javascript' src='/js/jquery.js'></script>
+    <script type='text/javascript' src='/js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.themepunch.revolution.min.js'></script>
+    <script type='text/javascript' src='/js/easing.min.js'></script>
+    <script type='text/javascript' src='/js/imagesloaded.pkgd.min.js'></script>
+    <script type='text/javascript' src='/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='/js/superfish-1.7.4.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.appear.min.js'></script>
+    <script type='text/javascript' src='/js/script.js'></script>
+    <script type='text/javascript' src='/js/swatches-and-photos.js'></script>
+    <script type='text/javascript' src='/js/jquery.cookie.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.prettyPhoto.js'></script>
+    <script type='text/javascript' src='/js/jquery.prettyPhoto.init.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.selectBox.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.touchSwipe.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.transit.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.carouFredSel.js'></script>
+    <script type='text/javascript' src='/js/jquery.magnific-popup.js'></script>
+    <script type='text/javascript' src='/js/isotope.pkgd.min.js'></script>
+
+    <script type='text/javascript' src='/js/extensions/revolution.extension.video.min.js'></script>
+    <script type='text/javascript' src='/js/extensions/revolution.extension.slideanims.min.js'></script>
+    <script type='text/javascript' src='/js/extensions/revolution.extension.actions.min.js'></script>
+    <script type='text/javascript' src='/js/extensions/revolution.extension.layeranimation.min.js'></script>
+    <script type='text/javascript' src='/js/extensions/revolution.extension.kenburn.min.js'></script>
+    <script type='text/javascript' src='/js/extensions/revolution.extension.navigation.min.js'></script>
+    <script type='text/javascript' src='/js/extensions/revolution.extension.migration.min.js'></script>
+    <script type='text/javascript' src='/js/extensions/revolution.extension.parallax.min.js'></script>
 
 @stack('js')
 
